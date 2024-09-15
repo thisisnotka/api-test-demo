@@ -19,7 +19,7 @@ jobs:
         run: npm install -g newman
 
       - name: Install Reporter
-        run: npm install newman-reporter-html
+        run: npm install -g newman-reporter-html
 
       - name: Run Postman Collection
         run: |
