@@ -1,0 +1,139 @@
+{
+  "info": {
+    "name": "Weather API Collection",
+    "_postman_id": "abcd-1234-efgh-5678",
+    "description": "Collection to test a free Weather API using OpenWeatherMap.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Current Weather",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/weather?q={{city}}&appid={{apiKey}}",
+          "protocol": "https",
+          "host": [
+            "api",
+            "openweathermap",
+            "org"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "weather"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "{{city}}",
+              "description": "City name"
+            },
+            {
+              "key": "appid",
+              "value": "{{apiKey}}",
+              "description": "API Key"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5-Day Weather Forecast",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/forecast?q={{city}}&appid={{apiKey}}",
+          "protocol": "https",
+          "host": [
+            "api",
+            "openweathermap",
+            "org"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "forecast"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "{{city}}",
+              "description": "City name"
+            },
+            {
+              "key": "appid",
+              "value": "{{apiKey}}",
+              "description": "API Key"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Air Pollution Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/air_pollution?lat={{lat}}&lon={{lon}}&appid={{apiKey}}",
+          "protocol": "https",
+          "host": [
+            "api",
+            "openweathermap",
+            "org"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "air_pollution"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}",
+              "description": "Latitude"
+            },
+            {
+              "key": "lon",
+              "value": "{{lon}}",
+              "description": "Longitude"
+            },
+            {
+              "key": "appid",
+              "value": "{{apiKey}}",
+              "description": "API Key"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "apiKey",
+      "value": "<your-api-key>",
+      "type": "string"
+    },
+    {
+      "key": "city",
+      "value": "London",
+      "type": "string"
+    },
+    {
+      "key": "lat",
+      "value": "51.51",
+      "type": "string"
+    },
+    {
+      "key": "lon",
+      "value": "-0.13",
+      "type": "string"
+    }
+  ]
+}
